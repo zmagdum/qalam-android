@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="input_background">#E8303030</color>
+
+    <color name="iconColor">#FFFFFFFF</color>
+    <color name="iconBackground">#FF000000</color>
+    <color name="imageback">#121212</color>
+    <color name="fill_color">@color/white</color>
+    <color name="strokeColor">@color/white</color>
+
+    <color name="headlinesText">@color/white</color>
+
+
+
+
+
+</resources>

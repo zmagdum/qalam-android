@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/destination_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        />
+
+    <item
+        android:id="@+id/destination_podcastSeries"
+        android:icon="@drawable/ic_podcas_st"
+        android:title="@string/podcastSeries"
+        />
+
+    <item
+        android:id="@+id/destination_library"
+        android:icon="@drawable/ic_library"
+        android:title="@string/library"
+        />
+
+    <item
+        android:id="@+id/destination_donate"
+        android:icon="@drawable/ic_donate"
+        android:title="@string/donate"
+        />
+
+    <item
+        android:id="@+id/destination_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        />
+</menu>

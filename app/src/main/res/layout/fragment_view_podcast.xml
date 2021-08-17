@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.ViewPodcastFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.fragments.ViewPodcastFragment">
+
+
+        <ImageView
+            android:id="@+id/ViewPodcastBlureImage"
+            android:layout_width="0dp"
+            android:layout_height="280dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/qalam_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <ImageButton
+            android:id="@+id/SavedBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:visibility="visible" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="250dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewPodcastBlureImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/SavedBackArrow"
+            app:layout_constraintTop_toTopOf="@+id/SavedBackArrow">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/viewPodcastMainImage"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="match_parent">
+
+            </androidx.appcompat.widget.AppCompatImageView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/ViewPodcastTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/test_1"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/ViewPodcastLike"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/SavedBackArrow"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+
+        <ToggleButton
+            android:id="@+id/ViewPodcastLike"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_like"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView3"
+            app:layout_constraintTop_toTopOf="@+id/ViewPodcastTitle" />
+
+        <TextView
+            android:id="@+id/ViewPodcastDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/aweek"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/ViewPodcastTitle"
+            app:layout_constraintStart_toStartOf="@+id/ViewPodcastTitle"
+            app:layout_constraintTop_toBottomOf="@+id/ViewPodcastTitle" />
+
+        <TextView
+            android:id="@+id/ViewPodcastDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="24,282 likes     3 days ago"
+            app:layout_constraintEnd_toEndOf="@+id/ViewPodcastDescription"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ViewPodcastDescription"
+            app:layout_constraintTop_toBottomOf="@+id/ViewPodcastDescription" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#126088"
+            android:text="@string/play_latest_episode"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_play"
+            app:iconTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ViewPodcastDate">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/episode"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ViewPodcastTitle"
+            app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ViewPodcastList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/view_podcast_view_holder_layout"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ViewPodcastLike"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

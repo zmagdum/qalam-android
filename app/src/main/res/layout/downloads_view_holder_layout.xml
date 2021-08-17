@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/downloadsDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/today"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downloadsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/knowledge_intensive_gain_the_knowledge_of_how_to_practically"
+
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/downloadsDone"
+        app:layout_constraintStart_toStartOf="@+id/downloadsDate"
+        app:layout_constraintTop_toBottomOf="@+id/downloadsDate" />
+
+    <ImageView
+        android:id="@+id/downloadsDone"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/downloadsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/downloadsTitle"
+        app:srcCompat="@drawable/ic_done" />
+
+
+    <ImageView
+        android:id="@+id/downloadsPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/downloadsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/downloadsTitle"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_play" />
+
+    <TextView
+        android:id="@+id/downloadsLocalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/ttth"
+        app:layout_constraintBottom_toBottomOf="@+id/downloadsPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/downloadsPlay"
+        app:layout_constraintTop_toTopOf="@+id/downloadsPlay" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/shadow_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="@+id/downloadsDone"
+        app:layout_constraintStart_toStartOf="@+id/downloadsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/downloadsPlay"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

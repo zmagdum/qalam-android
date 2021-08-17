@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="4dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/viewPodcastDownload"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/viewPodcastLike"
+        app:layout_constraintStart_toStartOf="@+id/viewPodcastLike"
+        app:layout_constraintTop_toBottomOf="@+id/viewPodcastLike"
+        app:srcCompat="@drawable/ic_downolad" />
+
+    <ImageView
+
+        android:id="@+id/viewPodcastImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/viewPodcastPlayBotton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/viewPodcastTitle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/viewPodcastImage"
+        app:layout_constraintTop_toBottomOf="@+id/viewPodcastTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/viewPodcastTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/test_1"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/viewPodcastImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewPodcastEpscount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/date_test"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewPodcastLike"
+        app:layout_constraintStart_toStartOf="@+id/viewPodcastTitle"
+        app:layout_constraintTop_toBottomOf="@+id/viewPodcastDescription" />
+
+    <ToggleButton
+        android:id="@+id/viewPodcastLike"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_like"
+        android:checked="false"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="@+id/viewPodcastEpscount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPodcastTitle" />
+
+    <TextView
+        android:id="@+id/viewPodcastDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/a_week_long_experience_with_the"
+
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewPodcastLike"
+        app:layout_constraintStart_toStartOf="@+id/viewPodcastTitle"
+        app:layout_constraintTop_toBottomOf="@+id/viewPodcastTitle" />
+
+    <TextView
+        android:id="@+id/viewPodcastReleaseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/release_28_apr_duration_15_sep"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPodcastImage"
+        app:layout_constraintEnd_toStartOf="@+id/viewPodcastDownload"
+        app:layout_constraintStart_toStartOf="@+id/viewPodcastEpscount"
+        app:layout_constraintTop_toBottomOf="@+id/viewPodcastEpscount"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shadow_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/viewPodcastLike"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/viewPodcastImage"
+        app:layout_constraintTop_toBottomOf="@+id/viewPodcastImage"
+        app:layout_constraintVertical_bias="0.165">
+
+    </View>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

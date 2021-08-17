@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/destination_home">
+
+    <fragment
+        android:id="@+id/destination_home"
+        android:name="com.QalamInstitute.qalam.views.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/destination_podcastSeries"
+        android:name="com.QalamInstitute.qalam.views.fragments.PodcastSeriesFragment"
+        android:label="fragment_podcast_series"
+        tools:layout="@layout/fragment_podcast_series" />
+    <fragment
+        android:id="@+id/destination_library"
+        android:name="com.QalamInstitute.qalam.views.fragments.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_destination_library_to_viewPodcastFragment"
+            app:destination="@id/viewPodcastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_donate"
+        android:name="com.QalamInstitute.qalam.views.fragments.DonateFragment"
+        android:label="fragment_donate"
+        tools:layout="@layout/fragment_donate" />
+    <fragment
+        android:id="@+id/destination_settings"
+        android:name="com.QalamInstitute.qalam.views.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/viewPodcastFragment"
+        android:name="com.QalamInstitute.qalam.views.fragments.ViewPodcastFragment"
+        android:label="fragment_view_podcast"
+        tools:layout="@layout/fragment_view_podcast" />
+</navigation>
